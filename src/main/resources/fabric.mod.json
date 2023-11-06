@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pseudolib",
+  "version": "1.0",
+  "name": "pseudolib",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/rudy/pseudolib"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/pseudolib/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.rubyboat.pseudolib.Pseudolib"
+    ]
+  },
+  "mixins": [
+    "pseudolib.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.24",
+    "fabric": "*",
+    "minecraft": "1.20.2"
+  }
+}

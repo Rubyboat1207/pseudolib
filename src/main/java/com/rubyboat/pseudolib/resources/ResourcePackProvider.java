@@ -56,9 +56,9 @@ public class ResourcePackProvider implements HttpHandler {
                     while (entries.hasMoreElements()) {
                         JarEntry entry = entries.nextElement();
                         String name = entry.getName();
-                        if (name.startsWith("path/to/resources/inside/jar/") && !entry.isDirectory()) {
+                        if (name.startsWith("resourcepack/") && !entry.isDirectory()) {
                             // Create a new zip entry and copy the resource content
-                            ZipEntry zipEntry = new ZipEntry(name.substring("path/to/resources/inside/jar/".length()));
+                            ZipEntry zipEntry = new ZipEntry(name.substring("resourcepack/".length()));
                             zos.putNextEntry(zipEntry);
                             try (InputStream is = jarFile.getInputStream(entry)) {
                                 byte[] buffer = new byte[1024];
